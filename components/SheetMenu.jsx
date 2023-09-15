@@ -15,13 +15,13 @@ const SheetMenu = () => {
           <nav className="flex gap-3 justify-end w-full mr-2">
             <ul className="flex flex-col gap-5 justify-end w-full">
               <li>
-                <Link href={"/"}>História</Link>
+                <Link href={"/#historia"}>História</Link>
               </li>
               <li>
-                <Link href={"/"}>Zostava</Link>
+                <Link href={"/#zostava"}>Zostava</Link>
               </li>
               <li>
-                <Link href={"/"}>Shop</Link>
+                <Link href={"/#shop"}>Shop</Link>
               </li>
             </ul>
           </nav>
