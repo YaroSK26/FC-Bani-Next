@@ -26,7 +26,7 @@ const NavBar = () => {
     };
   }, []);
   return (
-    <nav className="text-gray-200 w-full h-20 bgNav text-lg">
+    <nav className="text-gray-200 w-full h-20 bgNav text-lg ">
       <div className="flex justify-center gap-5 items-center h-20 pl-5 pr-5">
         <Link className="w-full cursor" href={"/"}>
           <img src="/fcbani.png" alt="" className="w-24 hover:scale-110 transition-all" />

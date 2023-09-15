@@ -3,14 +3,18 @@ import Historia from "../components/Historia";
 import Novinka from "../components/Novinka";
 import Zostava from "../components/Zostava";
 import Formular from "../components/Formular";
+import Vajo from "../components/Vajo";
+import Shop from "../components/Shop";
 
 export default function Home() {
   return (
     <div>
+      <Vajo></Vajo>
       <Novinka></Novinka>
       <Spozory></Spozory>
       <Historia></Historia>
       <Zostava></Zostava>
+      <Shop></Shop>
       <Formular></Formular>
 
       <footer>
@@ -25,8 +29,9 @@ export default function Home() {
           <p>
             Túto stránka vytvoril &nbsp;
             <a
-              className="underline"
-              href="https://jaroslav-portfolio.vercel.app/" target="_blank"
+              className="cursor-pointer underline "
+              href="https://jaroslav-portfolio.vercel.app/"
+              target="_blank"
             >
               Jaroslav Barabáš
             </a>

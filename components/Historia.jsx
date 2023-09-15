@@ -5,7 +5,7 @@ const Historia = () => {
       <p className="md:text-4xl text-3xl text-center pt-5 pb-3 underline ">História</p>
 
       <div>
-        <strong>Začiatky (2021-)</strong>
+        <strong>Začiatky (2021-teraz)</strong>
         <br />
         🇭🇺 <br />
         <p>
