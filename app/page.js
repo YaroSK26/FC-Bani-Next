@@ -27,7 +27,7 @@ export default function Home() {
             Čert
           </a>
           <p>
-            Túto stránka vytvoril &nbsp;
+            Túto stránku vytvoril &nbsp;
             <a
               className="cursor-pointer underline "
               href="https://jaroslav-portfolio.vercel.app/"

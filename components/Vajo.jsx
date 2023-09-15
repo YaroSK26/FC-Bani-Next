@@ -11,7 +11,7 @@ const Vajo = () => {
         initial="hidden"
         animate="show"
         
-        className="flex flex-col md:flex-row justify-center items-center gap-10 mt-[140px] ml-0 md:ml-20"
+        className="flex flex-col md:flex-row  justify-center items-center gap-5 mt-[140px] ml-0 md:ml-20"
       >
         <Image width={100} height={100} className="green " src="/realvajko.jpg" alt="vajko" />
         <p className="VAJO text-[80px] md:text-[100px]">„Vajoo“</p>
