@@ -3,7 +3,7 @@
 import { toast } from "react-hot-toast";
 import { withSwal } from "react-sweetalert2";
 import emailjs from "@emailjs/browser";
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import BallCanvas from "./BallCanvas"
 import { motion } from "framer-motion";
 import { fadeIn, slideIn } from "../utils/motion";
@@ -67,11 +67,36 @@ const Formular = ({swal}) => {
   };
 
   const [ref, inView] = useInView();
-   const [hasAnimated, setHasAnimated] = useState(false);
+  const [hasAnimated, setHasAnimated] = useState(false);
 
-   if (inView && !hasAnimated) {
-     setHasAnimated(true);
-   }
+  if (inView && !hasAnimated) {
+    setHasAnimated(true);
+  }
+
+
+   const [windowWidth, setWindowWidth] = useState(null);
+
+   useEffect(() => {
+     // Function to update window width
+     const updateWindowWidth = () => {
+       setWindowWidth(window.innerWidth);
+     };
+
+     // Add event listener when component mounts
+     window.addEventListener("resize", updateWindowWidth);
+
+     // Initialize window width
+     updateWindowWidth();
+
+     // Remove event listener when component unmounts
+     return () => {
+       window.removeEventListener("resize", updateWindowWidth);
+     };
+   }, []);
+
+  // Check if windowWidth is greater than 400 on the client side
+  const isWideEnough = typeof window !== "undefined" && windowWidth > 1280;
+
   return (
     <div className="flex justify-center items-center">
       <motion.div
@@ -125,7 +150,7 @@ const Formular = ({swal}) => {
         initial="hidden"
         animate={hasAnimated ? "show" : "hidden"}
       >
-        {window.innerWidth > 1280 && <BallCanvas />}
+        {isWideEnough && <BallCanvas />}
       </motion.div>
     </div>
   );

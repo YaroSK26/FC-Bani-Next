@@ -5,8 +5,7 @@ import { useEffect, useState } from "react";
 import SheetMenu from "./SheetMenu";
 
 const NavBar = () => {
-
-    const [windowWidth, setWindowWidth] = useState(null);
+  const [windowWidth, setWindowWidth] = useState(null);
 
   useEffect(() => {
     // Function to update window width
@@ -25,6 +24,10 @@ const NavBar = () => {
       window.removeEventListener("resize", updateWindowWidth);
     };
   }, []);
+
+  // Check if windowWidth is greater than 400 on the client side
+  const isWideEnough = typeof window !== "undefined" && windowWidth > 400;
+
   return (
     <nav className="text-gray-200 w-full h-20 bgNav text-lg fixed top-0 z-20 ">
       <div className="flex justify-center gap-5 items-center h-20 pl-5 pr-5 relative">
@@ -41,7 +44,7 @@ const NavBar = () => {
           />
         </Link>
 
-        {window.innerWidth && windowWidth > 400 && (
+        {isWideEnough && (
           <nav className="flex gap-3 justify-end w-full">
             <ul className="flex gap-3 justify-end w-full">
               <li>
@@ -63,7 +66,7 @@ const NavBar = () => {
           </nav>
         )}
 
-        {windowWidth && windowWidth <= 400 && <SheetMenu />}
+        {!isWideEnough && <SheetMenu />}
       </div>
     </nav>
   );
