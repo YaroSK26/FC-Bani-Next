@@ -69,6 +69,7 @@
 @layer base {
   * {
     @apply border-border;
+    scroll-behavior: smooth;
     
   }
   body {
@@ -114,6 +115,7 @@ nav ul li :hover::after {
     opacity: 0.25;
     display: flex;
     margin: 0px auto;
+     transition: transform 0.5s, opacity 2.5s;
     }
 
 
@@ -264,3 +266,18 @@ transform: rotate(-360deg);
             auto;
   
 }
+
+.pt{
+    opacity: 0;
+    transition: opacity 2s;
+}
+
+@media only screen and (min-width: 1281px) {
+  .imgFCBani:hover ~ .pt {
+  opacity: 1;
+  transition: opacity 2s;
+  cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='31' height='37' viewport='0 0 100 100' style='fill:black;font-size:19px;'><text y='50%'>⚽</text></svg>") 16 0,
+            auto;
+}
+}
+

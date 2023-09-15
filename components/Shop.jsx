@@ -1,13 +1,31 @@
-import React from 'react'
+"use client";
+
+import { motion } from "framer-motion";
+import { textVariant } from "../utils/motion";
+import { useInView } from "react-intersection-observer";
+import { useState } from "react";
+
 
 const Shop = () => {
+    const [ref, inView] = useInView();
+     const [hasAnimated, setHasAnimated] = useState(false);
+
+     if (inView && !hasAnimated) {
+       setHasAnimated(true);
+     }
   return (
     <div className="p-2">
       <h1 className="md:text-4xl text-3xl text-center pt-5 pb-3 underline">
         Shop
       </h1>
 
-      <div className="flex flex-wrap justify-center items-center gap-32 mt-10">
+      <motion.div
+        variants={textVariant()}
+        initial="hidden"
+        animate={hasAnimated ? "show" : "hidden"}
+        ref={ref}
+        className="flex flex-wrap justify-center items-center gap-32 mt-10"
+      >
         <div>
           <a href="/oliver.jpg">
             <img
@@ -66,9 +84,9 @@ const Shop = () => {
             </button>
           </a>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
-}
+};
 
-export default Shop
+export default Shop;

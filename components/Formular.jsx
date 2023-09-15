@@ -5,6 +5,10 @@ import { withSwal } from "react-sweetalert2";
 import emailjs from "@emailjs/browser";
 import { useState, useRef } from "react";
 import BallCanvas from "./BallCanvas"
+import { motion } from "framer-motion";
+import { fadeIn, slideIn } from "../utils/motion";
+import { useInView } from "react-intersection-observer";
+
 
 const Formular = ({swal}) => {
   const formRef = useRef();
@@ -61,48 +65,68 @@ const Formular = ({swal}) => {
         }
       );
   };
+
+  const [ref, inView] = useInView();
+   const [hasAnimated, setHasAnimated] = useState(false);
+
+   if (inView && !hasAnimated) {
+     setHasAnimated(true);
+   }
   return (
     <div className="flex justify-center items-center">
-      <form
-        ref={formRef}
-        onSubmit={handleSubmit}
-        className="box  rounded-3xl w-[350px] xs:w-full md:w-[400px] my-10 "
+      <motion.div
+        variants={slideIn("left", "tween", 0.2, 1)}
+        initial="hidden"
+        animate={hasAnimated ? "show" : "hidden"}
+        ref={ref}
       >
-        <label htmlFor="form">
-          <h1 className="text-2xl">Formulár</h1>
-        </label>
-        <input
-          required
-          type="text"
-          name="name"
-          id="name"
-          value={form.name}
-          onChange={handleChange}
-          placeholder="Tvoje meno"
-        />
-        <input
-          required
-          type="email"
-          name="email"
-          id="email"
-          value={form.email}
-          onChange={handleChange}
-          placeholder="Tvoj email"
-        />
-        <textarea
-          required
-          type="text"
-          name="message"
-          id="message"
-          value={form.message}
-          onChange={handleChange}
-          cols="30"
-          rows="10"
-          placeholder="Čo by si chcel nám povedať?"
-        ></textarea>
-        <button type="submit"> {loading ? "Sending..." : "Send"}</button>
-      </form>
-      <div>{window.innerWidth > 1280 && <BallCanvas />}</div>
+        <form
+          ref={formRef}
+          onSubmit={handleSubmit}
+          className="box  rounded-3xl w-[350px] xs:w-full md:w-[400px] my-10 "
+        >
+          <label htmlFor="form">
+            <h1 className="text-2xl">Formulár</h1>
+          </label>
+          <input
+            required
+            type="text"
+            name="name"
+            id="name"
+            value={form.name}
+            onChange={handleChange}
+            placeholder="Tvoje meno"
+          />
+          <input
+            required
+            type="email"
+            name="email"
+            id="email"
+            value={form.email}
+            onChange={handleChange}
+            placeholder="Tvoj email"
+          />
+          <textarea
+            required
+            type="text"
+            name="message"
+            id="message"
+            value={form.message}
+            onChange={handleChange}
+            cols="30"
+            rows="10"
+            placeholder="Čo by si chcel nám povedať?"
+          ></textarea>
+          <button type="submit"> {loading ? "Sending..." : "Send"}</button>
+        </form>
+      </motion.div>
+      <motion.div
+        variants={fadeIn("left", "tween", 0.2, 1)}
+        initial="hidden"
+        animate={hasAnimated ? "show" : "hidden"}
+      >
+        {window.innerWidth > 1280 && <BallCanvas />}
+      </motion.div>
     </div>
   );
 };

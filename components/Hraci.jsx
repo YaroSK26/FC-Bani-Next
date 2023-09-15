@@ -1,7 +1,26 @@
+"use client";
+
+import { motion } from "framer-motion";
+import { slideIn } from "../utils/motion";
+import { useInView } from "react-intersection-observer";
+import { useState } from "react";
+
 
 const Hraci = () => {
+    const [ref, inView] = useInView();
+     const [hasAnimated, setHasAnimated] = useState(false);
+
+     if (inView && !hasAnimated) {
+       setHasAnimated(true);
+     }
   return (
-    <div className="pt-4 grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 px-1 gap-3 ">
+    <motion.div
+      initial="hidden"
+      animate={hasAnimated ? "show" : "hidden"}
+      ref={ref}
+      variants={slideIn("left", "tween", 0.2, 1)}
+      className="pt-4 grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 px-1 gap-3 "
+    >
       <div>
         <img
           className="w-32 h-32 rounded-full flex"
@@ -105,9 +124,10 @@ const Hraci = () => {
           <strong>Yaro - </strong> je frajer. Najlepší futbalista z klubu FC
           Bäni. Gulaš, Karbonátok.
         </p>
+        <div className="h-16 w-4 " id="shop"></div>
       </div>
-    </div>
+    </motion.div>
   );
-}
+};
 
-export default Hraci
+export default Hraci;
