@@ -150,9 +150,7 @@ const Formular = ({swal}) => {
         initial="hidden"
         animate={hasAnimated ? "show" : "hidden"}
       >
-
-        <BallCanvas />
-        {/* {isWideEnough && } */}
+        {isWideEnough && <BallCanvas />}
       </motion.div>
     </div>
   );
