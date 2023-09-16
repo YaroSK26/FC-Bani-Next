@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import {slideIn } from "../utils/motion";
+import Link from "next/link";
 
 const Novinka = () => {
   return (
@@ -17,10 +18,13 @@ const Novinka = () => {
           <img src="/fcbani.png" alt="" className="w-52" />
         </div>
         <div className="flex justify-center items-start mx-auto md:mx-0 pl-10  w-[300px]">
-          Stránka FC Bäni práve prešla aktualizáciou! Rovnaký dizajn no
-          vylepšené funkcie čakajú na fanúšikov futbalového klubu. Sledujte
-          aktuálne správy, štatistiky tímu a viac na našej modernizovanej
-          webovej stránke. Buďte stále v obraze s novinkami ohľadom FC Bäni!
+          <p>
+            Stránka FC Bäni práve prešla aktualizáciou! Rovnaký dizajn no
+            vylepšené funkcie čakajú na fanúšikov futbalového klubu. Sledujte
+            aktuálne správy, štatistiky tímu a viac na našej modernizovanej
+            webovej stránke. Buďte stále v obraze s novinkami ohľadom FC Bäni! &nbsp;
+            <Link className="underline text-green-700" href={"/spravy"}>Pozri staršie spravy.</Link>
+          </p>
         </div>
       </div>
     </motion.div>

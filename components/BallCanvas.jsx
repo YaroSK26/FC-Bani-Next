@@ -36,16 +36,17 @@ const BallCanvas = () => {
       frameloop="demand"
       shadows
       dpr={[1, 2]}
-      camera={{ position: [25, 3, 5], fov: 25 }}
+      camera={{ position: [25, 3, 10], fov: 25 }}
       gl={{ preserveDrawingBuffer: true }}
     >
       <Suspense fallback={<CanvasLoader />}>
         <OrbitControls
-        autoRotate={true}
+          autoRotate={true}
           enableZoom={false}
           enablePan={false}
           maxPolarAngle={Math.PI / 2}
-          minPolarAngle={Math.PI / 2}
+          minPolarAngle={0}
+          target={[0, -0.05, -1.5]}
         />
         <Ball />
       </Suspense>
