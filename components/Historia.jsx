@@ -53,7 +53,7 @@ const Historia = () => {
         <strong> Farby klubu </strong>
         <p>
           <strong>Zelená a čierna </strong> farba sú oficiálnymi farbami tímu a
-          klub sa nimi reprezentuje už viac ako jeden rokov. Aj preto je FC Bäni
+          klub sa nimi reprezentuje už viac ako dva roky. Aj preto je FC Bäni
           všeobecne známa ako “Prestaňte!??? ”, čo odkazuje na mená týchto
           farieb v maďarskom jazyku. Doteraz sa nevie presne prečo sa vedenie
           pôvodne rozhodlo práve pre tieto farby, a hoci vzniklo niekoľko

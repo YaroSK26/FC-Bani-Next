@@ -29,7 +29,7 @@ const [ref, inView] = useInView();
         variants={textVariant()}
         initial="hidden"
       >
-        <strong className="Martincoko pb-4">
+        <strong className="Martincoko pb-4 text-center">
           „Preco su na ovidvoch stranach ihriska“
         </strong>
       </motion.p>

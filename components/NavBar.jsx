@@ -34,13 +34,13 @@ const NavBar = () => {
         <Link className="w-full cursor" href={"/"}>
           <img
             src="/fcbani.png"
-            alt=""
+            alt="logo klubu FC Bäni"
             className="w-24 hover:scale-110 transition-all imgFCBani "
           />
           <img
             src="/pt.jpg"
             className="w-20 h-20 pt absolute  xl:left-[49%]  bottom-[0px] "
-            alt=""
+            alt=" Pán tajomný"
           />
         </Link>
 

@@ -188,10 +188,20 @@ nav ul li :hover::after {
     transition: 0.25s;
 }
 
+@media only screen and (max-width: 400px) {
 .box input[type="text"]:focus, .box input[type="email"]:focus, textarea:focus{
-  width: 270px;
+  width: 250px;
   border-color: green;
   transition:  0.25s;
+}
+}
+
+@media only screen and (min-width: 401px) {
+.box input[type="text"]:focus, .box input[type="email"]:focus, textarea:focus{
+  width: 250px;
+  border-color: green;
+  transition:  0.25s;
+}
 }
 .box button[type="submit"]{
     background: none ;

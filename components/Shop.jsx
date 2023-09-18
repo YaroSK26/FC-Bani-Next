@@ -30,7 +30,7 @@ const Shop = () => {
           <a href="/oliver.jpg">
             <img
               src="/oliver.jpg"
-              className="w-52  h-52 rounded-2xl "
+              className="w-52  h-52 rounded-2xl drop-shadow-xl"
               alt="obrázok oliverovho bicykla"
             />
           </a>
@@ -46,7 +46,7 @@ const Shop = () => {
         <div>
           <a href="/BENI.jpg">
             <img
-              className="w-52  h-52 rounded-2xl "
+              className="w-52  h-52 rounded-2xl drop-shadow-xl"
               src="/BENI.jpg"
               alt="obrázok braňového psa"
             />
@@ -67,7 +67,7 @@ const Shop = () => {
         <div>
           <a href="/dres.jpg">
             <img
-              className="w-52  h-52 rounded-2xl "
+              className="w-52  h-52 rounded-2xl drop-shadow-xl "
               src="/dres.jpg"
               alt="obrázok dresu FC Bäni"
             />

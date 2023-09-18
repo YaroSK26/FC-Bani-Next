@@ -15,7 +15,7 @@ const Novinka = () => {
       <h1 className="text-center mb-4 font-bold text-2xl">Najnovšia správa</h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-10   ">
         <div className="flex justify-center md:justify-end items-center">
-          <img src="/fcbani.png" alt="" className="w-52" />
+          <img src="/fcbani.png" alt="fc Bäni logo" className="w-52" />
         </div>
         <div className="flex justify-center items-start mx-auto md:mx-0 pl-10  w-[300px]">
           <p>
