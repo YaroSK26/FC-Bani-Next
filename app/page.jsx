@@ -17,7 +17,7 @@ export default function Home() {
       <Zostava></Zostava>
       <Shop></Shop>
       <Formular></Formular>
-      <Ludvik></Ludvik>
+      {/* <Ludvik></Ludvik> */}
 
       <footer>
         <div className="bgNav text-gray-200 flex flex-col  justify-center  text-center">
