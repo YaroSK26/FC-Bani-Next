@@ -19,7 +19,7 @@ const Novinka = () => {
         </div>
         <div className="flex justify-center text-left items-center mx-auto p-2 w-[350px] sm:w-[575px] mb-4">
           <p>
-            Včera sa konala dôležitá schôdza FC Bani, na ktorej sa klubové
+            Včera sa konala dôležitá schôdza FC Bäni, na ktorej sa klubové
             vedenie stretlo s hráčmi a trénermi. Po dlhom rokovaní a diskusiách
             boli nakoniec podpísané nové zmluvy, ktoré budú formovať budúcnosť
             tímu. Hráči s nádejou očakávajú nadchádzajúcu sezónu a veria, že
