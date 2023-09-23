@@ -12,6 +12,32 @@ const SpravyPage = () => {
         initial="hidden"
         animate={"show"}
       >
+        <h1 className="text-center mb-4 font-bold text-2xl">23.9.2023</h1>
+        <div className="grid grid-cols-1 gap-10   ">
+          <div className="flex justify-center items-center">
+            <img src="/porada.jpg" alt="" className="w-72" />
+          </div>
+          <div className="flex justify-center text-left items-center mx-auto p-2 w-[350px] sm:w-[575px]">
+            <p>
+              Včera sa konala dôležitá schôdza FC Bani, na ktorej sa klubové
+              vedenie stretlo s hráčmi a trénermi. Po dlhom rokovaní a
+              diskusiách boli nakoniec podpísané nové zmluvy, ktoré budú
+              formovať budúcnosť tímu. Hráči s nádejou očakávajú nadchádzajúcu
+              sezónu a veria, že tieto zmluvy prinesú úspech na ihrisku. Toto
+              stretnutie prišlo krátko po prehre FC Košice v zápase proti
+              Trenčínu pred Decatlonom, a tak sa nám zdá, že nové zmluvy sú
+              dôležitým krokom k návratu k víťazným výkonom.
+            </p>
+          </div>
+        </div>
+      </motion.div>
+
+      <motion.div
+        className="mt-24 "
+        variants={slideIn("left", "tween", 0.2, 1)}
+        initial="hidden"
+        animate={"show"}
+      >
         <h1 className="text-center mb-4 font-bold text-2xl">16.9.2023</h1>
         <div className="grid grid-cols-1  gap-10   ">
           <div className="flex justify-center  items-center">
@@ -71,7 +97,7 @@ const SpravyPage = () => {
         initial="hidden"
         animate="show"
       >
-        <h1 className="text-center mb-4 font-bold text-2xl">12.3.2022</h1>
+        <h1 className="text-center mb-4 font-bold text-2xl">12.3.2023</h1>
         <div className="grid grid-cols-1 gap-10   ">
           <div className="flex justify-center items-center">
             <video width="300" height="300" controls>
@@ -125,3 +151,5 @@ const SpravyPage = () => {
 };
 
 export default SpravyPage;
+
+

@@ -29,23 +29,23 @@ const NavBar = () => {
   const isWideEnough = typeof window !== "undefined" && windowWidth > 400;
 
   return (
-    <nav className="text-gray-200 w-full h-20 bgNav text-lg fixed top-0 z-20 ">
-      <div className="flex justify-center gap-5 items-center h-20 pl-5 pr-5 relative">
-        <Link className="w-full cursor" href={"/"}>
+    <nav className="text-gray-200 w-full h-20 bgNav text-lg fixed top-0 z-20 cursor-default ">
+      <div className="flex justify-center gap-5 w-full items-center h-20 pl-5 pr-5 relative  cursor-default">
+        <Link className="xs:w-full"  href={"/"}>
           <img
             src="/fcbani.png"
             alt="logo klubu FC Bäni"
-            className="w-24 hover:scale-110 transition-all imgFCBani "
+            className="w-24 hover:scale-110 transition-all imgFCBani cursor"
           />
           <img
             src="/pt.jpg"
-            className="w-20 h-20 pt absolute  xl:left-[49%]  bottom-[0px] "
+            className="w-20 h-20 pt absolute  xl:left-[49%]  bottom-[0px] cursor-default "
             alt=" Pán tajomný"
           />
         </Link>
 
         {isWideEnough && (
-          <nav className="flex gap-3 justify-end w-full">
+          <nav className="flex gap-8 justify-end w-full">
             <ul className="flex gap-3 justify-end w-full">
               <li>
                 <Link className="cursor  text-2xl" href={"/#historia"}>

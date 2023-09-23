@@ -5,6 +5,7 @@ import Zostava from "../components/Zostava";
 import Formular from "../components/Formular";
 import Vajo from "../components/Vajo";
 import Shop from "../components/Shop";
+import Ludvik from "../components/Ludvik";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <Zostava></Zostava>
       <Shop></Shop>
       <Formular></Formular>
+      <Ludvik></Ludvik>
 
       <footer>
         <div className="bgNav text-gray-200 flex flex-col  justify-center  text-center">

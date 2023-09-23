@@ -108,7 +108,7 @@ const Formular = ({swal}) => {
         <form
           ref={formRef}
           onSubmit={handleSubmit}
-          className="box  rounded-3xl w-[350px] xs:w-full md:w-[400px] my-10 "
+          className="box  rounded-3xl w-[350px] xs:w-full md:w-[400px] h-[575px] my-10 "
         >
           <label htmlFor="form">
             <h1 className="text-2xl">Formulár</h1>
@@ -140,6 +140,7 @@ const Formular = ({swal}) => {
             onChange={handleChange}
             cols="30"
             rows="10"
+            className="w-[250px] h-52 mb-16"
             placeholder="Čo by si chcel nám povedať?"
           ></textarea>
           <button type="submit"> {loading ? "Sending..." : "Send"}</button>

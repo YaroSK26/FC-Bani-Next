@@ -198,7 +198,7 @@ nav ul li :hover::after {
 
 @media only screen and (min-width: 401px) {
 .box input[type="text"]:focus, .box input[type="email"]:focus, textarea:focus{
-  width: 250px;
+  width: 270px;
   border-color: green;
   transition:  0.25s;
 }
@@ -291,3 +291,10 @@ transform: rotate(-360deg);
 }
 }
 
+#ludvik input,textarea{
+ @apply w-52 h-5 text-black
+}
+
+#ludvik {
+    @apply drop-shadow-xl
+}
