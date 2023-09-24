@@ -25,7 +25,7 @@ const SpravyPage = () => {
               formovať budúcnosť tímu. Hráči s nádejou očakávajú nadchádzajúcu
               sezónu a veria, že tieto zmluvy prinesú úspech na ihrisku. Toto
               stretnutie prišlo krátko po prehre FC Košice v zápase proti
-              Trenčínu pred Decatlonom, a tak sa nám zdá, že nové zmluvy sú
+              Trenčínu pred Decathlonom, a tak sa nám zdá, že nové zmluvy sú
               dôležitým krokom k návratu k víťazným výkonom.
             </p>
           </div>

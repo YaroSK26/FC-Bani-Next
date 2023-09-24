@@ -24,7 +24,7 @@ const Novinka = () => {
             boli nakoniec podpísané nové zmluvy, ktoré budú formovať budúcnosť
             tímu. Hráči s nádejou očakávajú nadchádzajúcu sezónu a veria, že
             tieto zmluvy prinesú úspech na ihrisku. Toto stretnutie prišlo
-            krátko po prehre FC Košice v zápase proti Trenčínu pred Decatlonom,
+            krátko po prehre FC Košice v zápase proti Trenčínu pred Decathlonom,
             a tak sa nám zdá, že nové zmluvy sú dôležitým krokom k návratu k
             víťazným výkonom.&nbsp;
             <Link className="underline text-green-700" href={"/spravy"}>
