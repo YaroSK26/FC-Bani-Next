@@ -47,6 +47,8 @@ const BallCanvas = () => {
           maxPolarAngle={Math.PI / 2}
           minPolarAngle={0}
           target={[0, -0.05, -1.5]}
+          enableDamping={true} // Pridanie tlmenia
+          dampingFactor={0.015} // Nastavenie faktora tlmenia
         />
         <Ball />
       </Suspense>

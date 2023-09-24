@@ -4,9 +4,8 @@ import { toast } from "react-hot-toast";
 import { withSwal } from "react-sweetalert2";
 import emailjs from "@emailjs/browser";
 import { useState, useRef, useEffect } from "react";
-import BallCanvas from "./BallCanvas"
 import { motion } from "framer-motion";
-import { fadeIn, slideIn } from "../utils/motion";
+import { slideIn } from "../utils/motion";
 import { useInView } from "react-intersection-observer";
 
 
@@ -140,19 +139,13 @@ const Formular = ({swal}) => {
             onChange={handleChange}
             cols="30"
             rows="10"
-            className="w-[250px] h-52 mb-16"
+            className="w-[250px] h-52 mb-16 text-white"
             placeholder="Čo by si chcel nám povedať?"
           ></textarea>
           <button type="submit"> {loading ? "Sending..." : "Send"}</button>
         </form>
       </motion.div>
-      <motion.div
-        variants={fadeIn("left", "tween", 0.2, 1)}
-        initial="hidden"
-        animate={hasAnimated ? "show" : "hidden"}
-      >
-        {isWideEnough && <BallCanvas />}
-      </motion.div>
+      
     </div>
   );
 };

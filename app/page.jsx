@@ -1,3 +1,5 @@
+"use client"
+
 import Spozory from "../components/Spozory";
 import Historia from "../components/Historia";
 import Novinka from "../components/Novinka";
@@ -7,8 +9,19 @@ import Vajo from "../components/Vajo";
 import Shop from "../components/Shop";
 import Ludvik from "../components/Ludvik";
 import Head from "next/head";
+import BallCanvas from "../components/BallCanvas";
+import { textVariant } from "../utils/motion";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import { useState } from "react";
+
 
 export default function Home() {
+    const [ref, inView] = useInView();
+    const [hasAnimated, setHasAnimated] = useState(false);
+      if (inView && !hasAnimated) {
+        setHasAnimated(true);
+      }
   return (
     <div>
       <Head>
@@ -25,6 +38,15 @@ export default function Home() {
       <Zostava></Zostava>
       <Shop></Shop>
       <Formular></Formular>
+      <motion.div
+        variants={textVariant()}
+        initial="hidden"
+        animate={hasAnimated ? "show" : "hidden"}
+        ref={ref}
+        className=" mb-10"
+      >
+        <BallCanvas />
+      </motion.div>
       {/* <Ludvik></Ludvik> */}
 
       <footer>
