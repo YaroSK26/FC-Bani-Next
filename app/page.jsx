@@ -6,10 +6,18 @@ import Formular from "../components/Formular";
 import Vajo from "../components/Vajo";
 import Shop from "../components/Shop";
 import Ludvik from "../components/Ludvik";
+import Head from "next/head";
 
 export default function Home() {
   return (
     <div>
+      <Head>
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4658673932856794"
+          crossorigin="anonymous"
+        ></script>
+      </Head>
       <Vajo></Vajo>
       <Novinka></Novinka>
       <Spozory></Spozory>
@@ -29,7 +37,7 @@ export default function Home() {
             Čert
           </a>
           <p>
-            Túto stránku vytvoril &nbsp;
+            Túto stránku vytvoril  
             <a
               className="cursor-pointer underline "
               href="https://jaroslav-portfolio.vercel.app/"
@@ -37,7 +45,7 @@ export default function Home() {
             >
               Jaroslav Barabáš
             </a>
-            &nbsp; zo zábavných účelov a nemá v úmysle nikoho zosmiešniť.
+              zo zábavných účelov a nemá v úmysle nikoho zosmiešniť.
           </p>
         </div>
       </footer>

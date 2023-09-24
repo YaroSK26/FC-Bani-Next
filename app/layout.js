@@ -2,6 +2,7 @@ import NavBar from '../components/NavBar';
 import './globals.css'
 import { Inter } from 'next/font/google'
 import { CrispProvider } from "../components/CrispProvider";
+import GoogleAnalytics from '../components/GoogleAnalytics';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -14,6 +15,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      {process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS ? (
+        <GoogleAnalytics ga_id={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS} />
+      ) : null}
       <body className={inter.className}>
         <NavBar></NavBar>
         {children}
@@ -22,3 +26,4 @@ export default function RootLayout({ children }) {
     </html>
   );
 }
+
