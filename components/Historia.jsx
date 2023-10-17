@@ -23,74 +23,94 @@ const Historia = () => {
         variants={slideIn("left", "tween", 0.2, 1)}
         initial="hidden"
         animate={hasAnimated ? "show" : "hidden"}
-        ref={ref}
+        ref={ref} className="mb-5"
       >
         <strong>Začiatky (2021-teraz)</strong>
         <br />
         🇭🇺 <br />
         <p>
-          Maďarský obchodník <strong> Stanislav Martinčko </strong> narodený 10
-          Január 1950 v mestečku Hernacurdok, bol autorom myšlienky založenia
-          futbalového klubu v Košiciach. Ním zverejnený inzerát v športovom
-          časopise (8 . októbra 2021) vyvolal veľkú odozvu medzi športovými
-          nadšencami.
+          V roku 2021 sa začala fascinujúca kapitola v histórii košického
+          futbalu, a to vďaka maďarskému obchodníkovi 
+          <span className="font-bold"> Stanislavovi Martinčkovi</span>. Narodil
+          sa 10. januára 1950 v malebnom mestečku Hernacurdok, no jeho vízia sa
+          rozvíjala v Košiciach. Stal sa autorom revolučnej myšlienky založenia
+          nového futbalového klubu v tomto meste. Jeho prvým krokom k
+          dosiahnutiu tejto ambicióznej myšlienky bol inzerát, ktorý zverejnil v
+          športovom časopise dňa 8. októbra 2021. Tento inzerát bol akýmsi
+          kameňom úrazu, ktorý spustil lavínu udalostí a vyvolal ohromnú odozvu
+          medzi miestnymi športovými nadšencami.
         </p>
         <br />
         💩
         <br />
         <p>
-          <strong> Branislav Martinček </strong>, v Košiciach známy ako Cifo, sa
-          v roku 2021 presťahoval do mesta Košice z obchodných dôvodov. Mesiac
-          po zverejnení oznámenia už predsedal prvému oficiálnemu tímovému
-          mítingu v triede 9.B. Spolu s Janíkom Šunkou a Baroslavom Jarabašom sa
-          historického zhromaždenia zúčastnili aj Peter German, Oliver džura,
-          Hemilton Kollár, David Deško, Jakup Pasta. Branislav Martinček sa po
-          zhromaždení stal prvým prezidentom klubu.
+          Samotný <span className="font-bold">Branislav Martinček</span> , ktorý
+          bol v Košiciach známy pod prezývkou Cifo, sa do mesta presťahoval z
+          obchodných dôvodov. O necelý mesiac po zverejnení inzerátu už stál v
+          čele prvého oficiálneho tímového mítingu v triede 9.B. Na tomto
+          stretnutí sa stretli ďalší nadšení športovci, medzi nimi Janík Šunka,
+          Baroslav Jarabaš, Peter German, Oliver Džura, Hemilton Kollár, David
+          Deško a Jakub Pasta. Branislav Martinčko sa na tomto historickom
+          zhromaždení stal prvým prezidentom novovzniknutého klubu, čím začal
+          budovať základy pre futbalový fenomén, ktorý by sa stal jedným z
+          najvýznamnejších klubov v regióne.
         </p>
         <br />
         🟢
         <br />
         <strong> Farby klubu </strong>
         <p>
-          <strong>Zelená a čierna </strong> farba sú oficiálnymi farbami tímu a
-          klub sa nimi reprezentuje už viac ako dva roky. Aj preto je FC Bäni
-          všeobecne známa ako “Prestaňte!??? ”, čo odkazuje na mená týchto
-          farieb v maďarskom jazyku. Doteraz sa nevie presne prečo sa vedenie
-          pôvodne rozhodlo práve pre tieto farby, a hoci vzniklo niekoľko
-          teórií, nikomu sa nikdy nepodarilo zaistiť dôkazy, ktoré by výber
-          farieb z akéhokoľvek dôvodu objasňovali. Prirodzene väčšina z teórií
-          vychádza z miesta vzniku a pôvodu klubu. Niektoré napríklad tvrdia, že
-          niekoľko rokov po založení FC Bäni boli farby prevzaté od jedného
-          maďarského klubu. Dnes však vieme, že tieto hypotézy sú vysoko
-          nepravdepodobné. Ďalšia zaujímavá, ale nepreukázaná teória je, že
-          zakladatelia sa rozhodli pre výber farieb na základe farby Beniho. A
-          sú tu ďalšie oveľa prozaickejšie návrhy, napríklad ten ktorý tvrdí, že
-          matka bratov Trebuňovcov (Marek a Marek) dodávala hráčom dresy so
-          zelenou a čiernou farbou. Ale ako už bolo uvedené vyššie, žiadnej z
-          týchto teórií sa nepodarilo ponúknuť nezvratné dôkazy o tom, prečo
-          klub použil tieto farby.
+          Farby klubu, <span className="font-bold">zelená a čierna</span> , sú
+          nesmierne dôležitým symbolom FC Bäni. Tieto farby reprezentujú klub už
+          viac ako dva roky a stali sa neodmysliteľnou súčasťou jeho identity.
+          Klub je všeobecne známy aj pod prezývkou &quot;Prestaňte!???&quot;, čo
+          odkazuje na ich názvy v maďarskom jazyku. Zatiaľ však neexistuje
+          definitívny dôkaz, ktorý by vysvetlil, prečo sa zakladatelia klubu
+          rozhodli práve pre tieto farby. Existuje niekoľko teórií, ale žiadna z
+          nich neposkytla presvedčivý dôkaz o tom, prečo sa klub rozhodol pre
+          túto farebnú kombináciu. Jedna z teórií hovorí, že farby klub prevzal
+          od maďarského futbalového klubu, ale táto teória je považovaná za
+          nepravdepodobnú. Ďalšia teória hovorí o tom, že farby boli vybrané na
+          základe farby Beniho, no ani to nie je definitívne potvrdené. Existuje
+          dokonca aj teória, že matka bratov Trebuňovcov, ktorí hrali za klub,
+          dodávala hráčom dresy v zeleno-čiernej farbe. Napriek tomu, žiadna z
+          týchto teórií neponúkla definitívny dôkaz o tom, prečo sa klub
+          rozhodol pre tieto farby.
         </p>
         <br />
         👕
         <p>
-          <strong>Dresy</strong> <br />7 eur. Dresy sú vyrobené Janovou tetou.
-          Ďakujeme.
+          <span className="font-bold">Dresy</span> FC Bäni sú skutočným klenotom
+          pre fanúšikov. Tieto dresy, ktoré sú vyrobené Janovou tetou, majú
+          cenovku len 7 eur a sú neodmysliteľnou súčasťou fanúšikovskej vášne
+          pre tento klub. Každý dres je špeciálny a nosí s sebou hrdosť a
+          oddanosť voči klubu.
         </p>
         <br />
         🗣️ <br />
-        <strong> Hymna </strong>
-        <br />
-        Vajoooooooooooooo vaaajoooooooooo vaaaaaajooo vajooo vajooo vajooooo
-        vajo vajo vaaajooo vajo vajooooo. Zopakovať 5x. <br />
-        <br />
+        <span className="font-bold">Hymna</span> FC Bäni je nezameniteľná. Text
+        &quot;Vajoooooooooooooo vaaajoooooooooo vaaaaaajooo vajooo vajooo
+        vajooooo vajo vajo vaaajooo vajo vajooooo&quot; znejúci päťkrát je
+        hymnou, ktorá sprevádza klub na jeho ceste k víťazstvám.
+        <br /><br />
         🏟️ <br />
-        <strong> Štadión </strong> <br />
-        Ihrisko ZŠ druzicová 4. <br />
+        <span className="font-bold">Štadión</span>, na ktorom FC Bäni hrá svoje
+        domáce zápasy, sa nachádza na adrese ZŠ Druzicová 4. Je to miesto, kde
+        sa koncentruje všetka vášeň a energia fanúšikov, aby povzbudzovali svoj
+        tím. <br />
         <br />
         🔰 <br />
-        <strong> Logo klubu </strong> <br />
-        Vytvorené v aplikácii na vytváranie log. Znázorňuje farby dresov a šport
-        - futbal ktorý klub hrá. <br />
+        <span className="font-bold">Logo</span> klubu FC Bäni bolo vytvorené v
+        špeciálnej aplikačnej platforme na tvorbu logotypov. Logo zachytáva
+        farby klubových dresov a samozrejme, symbolizuje samotný futbal, ktorý
+        je srdcom klubu. Je to jednoduchý, no výrazný symbol klubovej identity.
+
+        <br /><br />
+        Celý tento príbeh FC Bäni od jeho začiatkov v roku 2021 do súčasnosti je
+        príkladom odhodlania, vášne a oddanosti športu a klubu, ktorý sa stal
+        dôležitou súčasťou života Košičanov. Klub je viac než len futbalový tím
+        - je to spoločenstvo, ktoré spája ľudí vo vzájomnej láske k športu a
+        snahe dosiahnuť výnimočné výsledky.
       </motion.div>
       <img
         className="pozadieBani"

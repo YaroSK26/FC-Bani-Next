@@ -5,7 +5,31 @@ import { slideIn } from "../../utils/motion";
 
 const SpravyPage = () => {
   return (
-    <div>
+    <div className="mt-24">
+      <motion.div
+        className="mt-24 "
+        variants={slideIn("left", "tween", 0.2, 1)}
+        initial="hidden"
+        animate={"show"}
+      >
+        <h1 className="text-center mb-4 font-bold text-2xl">17.10.2023</h1>
+        <div className="grid grid-cols-1 gap-10   ">
+          <div className="flex justify-center items-center">
+            <img src="/oslava.jpg" alt="" className="w-72" />
+          </div>
+          <div className="flex justify-center text-left items-center mx-auto p-2 w-[350px] sm:w-[575px]">
+            <p>
+              8. Októbra sme s radosťou (ne)oslavili naše 2. výročie. Za tie dva
+              roky sme spoločne dosiahli veľa a posilnili našu futbalovú rodinu.
+              Sme hrdí na naše úspechy, ale aj napriek nášmu úsiliu sa
+              stretávame s neznášanlivosťou. Je čas pripomenúť všetkým, že sme
+              silný tím, a je smutné, že na to mnohí zabudli. Nikto by nemal
+              zatemňovať našu vášeň a oddanosť futbalu.
+            </p>
+          </div>
+        </div>
+      </motion.div>
+
       <motion.div
         className="mt-24 "
         variants={slideIn("left", "tween", 0.2, 1)}

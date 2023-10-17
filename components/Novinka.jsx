@@ -15,20 +15,18 @@ const Novinka = () => {
       <h1 className="text-center mb-4 font-bold text-3xl">Najnovšia správa</h1>
       <div className="grid grid-cols-1 gap-10   ">
         <div className="flex justify-center items-center">
-          <img src="/porada.jpg" alt="" className="w-72" />
+          <img src="/oslava.jpg" alt="" className="w-72" />
         </div>
         <div className="flex justify-center text-left items-center mx-auto p-2 w-[350px] sm:w-[575px] mb-4">
           <p>
-            Včera sa konala dôležitá schôdza FC Bäni, na ktorej sa klubové
-            vedenie stretlo s hráčmi a trénermi. Po dlhom rokovaní a diskusiách
-            boli nakoniec podpísané nové zmluvy, ktoré budú formovať budúcnosť
-            tímu. Hráči s nádejou očakávajú nadchádzajúcu sezónu a veria, že
-            tieto zmluvy prinesú úspech na ihrisku. Toto stretnutie prišlo
-            krátko po prehre FC Košice v zápase proti Trenčínu pred Decathlonom,
-            a tak sa nám zdá, že nové zmluvy sú dôležitým krokom k návratu k
-            víťazným výkonom.&nbsp;
+            8. Októbra sme s radosťou neoslavili naše 2. výročie. Za tie dva roky sme
+            spoločne dosiahli veľa a posilnili našu futbalovú rodinu. Sme hrdí
+            na naše úspechy, ale aj napriek nášmu úsiliu sa stretávame s
+            neznášanlivosťou. Je čas pripomenúť všetkým, že sme silný tím, a je
+            smutné, že na to mnohí zabudli. Nikto by nemal zatemňovať našu vášeň
+            a oddanosť futbalu.&nbsp;
             <Link className="underline text-green-700" href={"/spravy"}>
-              Pozri staršie spravy.
+              Pozri staršie správy.
             </Link>
           </p>
         </div>
