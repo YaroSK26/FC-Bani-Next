@@ -232,7 +232,7 @@
                             src={i.profileImg}
                             alt="profile picture of user"
                           />
-                          <h1 className="text-black pr-[18px]">
+                          <h1 className="text-white pr-[18px]">
                             {i.name} - {i.text}
                           </h1>
 
@@ -269,14 +269,14 @@
               value={text}
               onChange={(e) => setText(e.target.value)}
               placeholder="Send a message"
-              className="bg-transparent border-t-transparent border-x-transparent  outline-none border-b-[var(--color2)] border p-1"
+              className="bg-transparent border-t-transparent border-x-transparent  outline-none  border p-1"
             />
             {isSignedIn ? (
               true && (
                 <button>
                   <Send
                     size={52}
-                    className="bg-[var(--color2)] text-[var(--color1)] p-1 rounded-2xl cursor-pointer"
+                    className="bg-[var(--color2)] text-black p-1 rounded-2xl cursor-pointer"
                   />
                 </button>
               )
@@ -284,7 +284,7 @@
               <Link href={"/sign-up"}>
                 <Send
                   size={52}
-                  className="bg-[var(--color2)] text-[var(--color1)] p-1 rounded-2xl cursor-pointer"
+                  className="bg-[var(--color2)] text-black  p-1 rounded-2xl cursor-pointer"
                 />
               </Link>
             )}
