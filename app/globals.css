@@ -186,7 +186,7 @@ nav ul li :hover::after {
     transition: 0.25s;
 }
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 768px) {
 .box input[type="text"]:focus, .box input[type="email"]:focus, textarea:focus{
   width: 250px;
   border-color: green;
@@ -194,7 +194,7 @@ nav ul li :hover::after {
 }
 }
 
-@media only screen and (min-width: 401px) {
+@media only screen and (min-width: 769px) {
 .box input[type="text"]:focus, .box input[type="email"]:focus, textarea:focus{
   width: 270px;
   border-color: green;
@@ -289,10 +289,3 @@ transform: rotate(-360deg);
 }
 }
 
-#ludvik input,textarea{
- @apply w-52 h-5 text-black
-}
-
-#ludvik {
-    @apply drop-shadow-xl
-}

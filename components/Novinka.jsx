@@ -17,7 +17,7 @@ const Novinka = () => {
         <div className="flex justify-center items-center ">
           <img src="/eric.png" alt="" className="w-72 border-black border-2" />
         </div>
-        <div className="flex justify-center text-left items-center mx-auto p-2 w-[350px] sm:w-[575px] mb-4">
+        <div className="flex justify-center text-left items-center mx-auto p-2 w-[300px] sm:w-[575px] mb-4">
           <p>
             Eric Sports, známa osobnosť Instagramu, prekvapil svojich
             sledovateľov kontroverzným krokom – ukradol logo slávneho a

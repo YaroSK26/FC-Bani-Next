@@ -3,9 +3,11 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import SheetMenu from "./SheetMenu";
+import { UserButton, useAuth } from "@clerk/nextjs";
 
 const NavBar = () => {
   const [windowWidth, setWindowWidth] = useState(null);
+  const { isSignedIn } = useAuth();
 
   useEffect(() => {
     // Function to update window width
@@ -26,12 +28,12 @@ const NavBar = () => {
   }, []);
 
   // Check if windowWidth is greater than 400 on the client side
-  const isWideEnough = typeof window !== "undefined" && windowWidth > 400;
+  const isWideEnough = typeof window !== "undefined" && windowWidth > 768;
 
   return (
     <nav className="text-gray-200 w-full h-20 bgNav text-lg fixed top-0 z-20 cursor-default ">
-      <div className="flex justify-center gap-5 w-full items-center h-20 pl-5 pr-5 relative  cursor-default">
-        <Link className="xs:w-full"  href={"/"}>
+      <div className="flex justify-between  w-full items-center h-20 pl-5 pr-5 relative  cursor-default">
+        <Link className="md:w-full" href={"/"}>
           <img
             src="/fcbani.png"
             alt="logo klubu FC Bäni"
@@ -58,15 +60,31 @@ const NavBar = () => {
                 </Link>
               </li>
               <li>
+                <Link className="cursor text-2xl" href={"/#komunita"}>
+                  Komunita
+                </Link>
+              </li>
+              <li>
                 <Link className="cursor  text-2xl" href={"/#shop"}>
                   Shop
                 </Link>
               </li>
+              <span>
+                {isSignedIn && (
+                  <span>
+                    <UserButton />
+                  </span>
+                )}
+              </span>
             </ul>
           </nav>
         )}
 
-        {!isWideEnough && <SheetMenu />}
+        {!isWideEnough && (
+          <div className=" ">
+            <SheetMenu />
+          </div>
+        )}
       </div>
     </nav>
   );

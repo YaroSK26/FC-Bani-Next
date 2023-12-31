@@ -1,5 +1,6 @@
 "use client";
 
+import { UserButton, useAuth } from "@clerk/nextjs";
 import { Sheet, SheetContent, SheetTrigger } from "../components/ui/sheet";
 import { Menu } from "lucide-react";
 import Link from "next/link";
@@ -7,6 +8,7 @@ import { useState } from "react";
 
 const SheetMenu = () => {
   const [isSheetOpen, setIsSheetOpen] = useState(false);
+  const { isSignedIn } = useAuth();
 
   const openSheet = () => {
     setIsSheetOpen(true);
@@ -19,7 +21,7 @@ const SheetMenu = () => {
   const [menuButtonActive, setMenuButtonActive] = useState(false);
 
   return (
-    <div>
+    <div className="w-full">
       <Sheet open={isSheetOpen}>
         <SheetTrigger>
           <Menu
@@ -27,7 +29,7 @@ const SheetMenu = () => {
               openSheet();
               setMenuButtonActive(true);
             }}
-            className={`text-white md:hidden ${
+            className={`text-white md:hidden  ${
               menuButtonActive ? "active" : ""
             }`}
           />
@@ -54,10 +56,22 @@ const SheetMenu = () => {
                 </Link>
               </li>
               <li>
+                <Link href={"/#komunita"} onClick={closeSheet}>
+                  Komunita
+                </Link>
+              </li>
+              <li>
                 <Link href={"/#shop"} onClick={closeSheet}>
                   Shop
                 </Link>
               </li>
+              <span>
+                {isSignedIn && (
+                  <span>
+                    <UserButton />
+                  </span>
+                )}
+              </span>
             </ul>
           </nav>
         </SheetContent>

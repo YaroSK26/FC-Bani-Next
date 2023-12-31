@@ -14,6 +14,8 @@ import { textVariant } from "../utils/motion";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useState } from "react";
+import Community from "../components/Community";
+import { ClerkProvider } from "@clerk/nextjs";
 
 
 export default function Home() {
@@ -36,6 +38,7 @@ export default function Home() {
       <Spozory></Spozory>
       <Historia></Historia>
       <Zostava></Zostava>
+      <Community></Community>
       <Shop></Shop>
       <Formular></Formular>
       <motion.div
