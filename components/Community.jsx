@@ -11,7 +11,6 @@
   import Link from "next/link";
 
   const Community = ({ swal }) => {
-    console.log(toast.success);
     //timer
     // Load initial state from localStorage or set to default
     const [messageCount, setMessageCount] = useState(
@@ -249,7 +248,11 @@
                 ))
               ) : (
                 <p className="text-center">
-                  Začnite konverzáciu ako pravý fanušik!
+                  {isSignedIn ? (
+                    "Začnite konverzáciu ako pravý fanušik! "
+                  ) : (
+                    <Link href={"sign-up"} className="underline">Prihlaste sa pre videnie správ</Link>
+                  )}
                 </p>
               )}
             </div>
