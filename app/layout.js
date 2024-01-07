@@ -4,6 +4,7 @@ import { Inter } from 'next/font/google'
 import { CrispProvider } from "../components/CrispProvider";
 import { ClerkProvider } from '@clerk/nextjs';
 import {ToasterProvider} from "../components/ToastProvider"
+import { Analytics } from '@vercel/analytics/react';
  
 const inter = Inter({ subsets: ['latin'] })
 
@@ -21,6 +22,7 @@ export default function RootLayout({ children }) {
           <NavBar></NavBar>
           {children}
         <ToasterProvider />
+        <Analytics />
         </body>
         <CrispProvider />
       </ClerkProvider>
