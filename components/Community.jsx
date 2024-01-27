@@ -153,17 +153,18 @@
     const handleDelete = (id) => {
       swal
         .fire({
-          title: "Fakt chceš zmazať túto správu?",
+          title: "Chceš vymazať túto správu?",
           type: "warning",
           showCancelButton: true,
+          cancelButtonText: "Nie, nechcem",
           confirmButtonColor: "#DD6B55",
-          confirmButtonText: "Yes, delete",
+          confirmButtonText: "Áno, vymazať",
           reverseButtons: true,
         })
         .then(function (result) {
           if (result.isConfirmed) {
             axios.delete(`/api/community?id=${id}`).then(() => {
-              toast.success("Deleted!");
+              toast.success("Zmazané!");
               axios.get("/api/community").then((response) => {
                 setCommLoading(true);
                 setComm(response.data.Comm);
@@ -251,7 +252,9 @@
                   {isSignedIn ? (
                     "Začnite konverzáciu ako pravý fanušik! "
                   ) : (
-                    <Link href={"sign-up"} className="underline">Prihlaste sa pre videnie správ</Link>
+                    <Link href={"sign-up"} className="underline">
+                      Pre zobrazenie správ sa prihláste.
+                    </Link>
                   )}
                 </p>
               )}
@@ -276,7 +279,7 @@
                 <button>
                   <Send
                     size={52}
-                    className="bg-[var(--color2)] text-black p-1 rounded-2xl cursor-pointer"
+                    className="bg-[var(--color2)] text-black p-1 rounded-2xl cursor"
                   />
                 </button>
               )
@@ -284,7 +287,7 @@
               <Link href={"/sign-up"}>
                 <Send
                   size={52}
-                  className="bg-[var(--color2)] text-black  p-1 rounded-2xl cursor-pointer"
+                  className="bg-[var(--color2)] text-black  p-1 rounded-2xl cursor"
                 />
               </Link>
             )}

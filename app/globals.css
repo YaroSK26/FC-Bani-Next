@@ -172,7 +172,7 @@ nav ul li :hover::after {
 
 .box input[type="text"] , .box input[type="email"] , textarea{
     border: 0;
-    background: none;
+    background-color:black;
     display: block;
     resize: none;
     margin: 20px auto;
@@ -220,6 +220,7 @@ nav ul li :hover::after {
     background: green;
     transition: 0.5s;
 }
+
 
 
 .green {
@@ -272,8 +273,9 @@ transform: rotate(-360deg);
    background: linear-gradient(90deg, rgba(5, 15, 3, 1) 0%, rgba(12, 106, 60, 1) 49%, rgba(3, 15, 12, 1) 100%);
     cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='31' height='37' viewport='0 0 100 100' style='fill:black;font-size:19px;'><text y='50%'>⚽</text></svg>") 16 0,
             auto;
-  
 }
+
+
 
 .pt{
     opacity: 0;
@@ -289,3 +291,44 @@ transform: rotate(-360deg);
 }
 }
 
+
+
+
+/*slider*/
+
+.slideshow {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.slide {
+  display: none;
+}
+
+.slide.active {
+  display: block;
+}
+
+.dots {
+  position: absolute;
+  bottom: -50px;
+  width: 100%;
+  text-align: center;
+}
+
+.dot {
+  height: 15px;
+  width: 15px;
+  margin:  5px;
+  background-color: grey;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.dot.active {
+  background-color: rgba(12, 106, 60, 1);
+}

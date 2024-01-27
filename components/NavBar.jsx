@@ -60,6 +60,11 @@ const NavBar = () => {
                 </Link>
               </li>
               <li>
+                <Link className="cursor  text-2xl" href={"/#treningy"}>
+                  Tréningy
+                </Link>
+              </li>
+              <li>
                 <Link className="cursor text-2xl" href={"/#komunita"}>
                   Komunita
                 </Link>

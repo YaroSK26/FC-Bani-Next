@@ -130,7 +130,7 @@ const Hraci = () => {
           <span className="border-none font-bold">Yaro - </span> je frajer.
           Najlepší futbalista z klubu FC Bäni. Gulaš, Karbonátok.
         </p>
-        <div className="h-16 w-4 " id="komunita"></div>
+        <div className="h-16 w-4 " id="treningy"></div>
       </div>
     </motion.div>
   );

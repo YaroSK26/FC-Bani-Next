@@ -7,7 +7,6 @@ import Zostava from "../components/Zostava";
 import Formular from "../components/Formular";
 import Vajo from "../components/Vajo";
 import Shop from "../components/Shop";
-import Ludvik from "../components/Ludvik";
 import Head from "next/head";
 import BallCanvas from "../components/BallCanvas";
 import { textVariant } from "../utils/motion";
@@ -15,7 +14,7 @@ import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useState } from "react";
 import Community from "../components/Community";
-import { ClerkProvider } from "@clerk/nextjs";
+import Trening from "../components/Trening"
 
 
 export default function Home() {
@@ -38,6 +37,7 @@ export default function Home() {
       <Spozory></Spozory>
       <Historia></Historia>
       <Zostava></Zostava>
+      <Trening></Trening>
       <Community></Community>
       <Shop></Shop>
       <Formular></Formular>

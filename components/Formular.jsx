@@ -76,24 +76,19 @@ const Formular = ({swal}) => {
    const [windowWidth, setWindowWidth] = useState(null);
 
    useEffect(() => {
-     // Function to update window width
      const updateWindowWidth = () => {
        setWindowWidth(window.innerWidth);
      };
 
-     // Add event listener when component mounts
      window.addEventListener("resize", updateWindowWidth);
 
-     // Initialize window width
      updateWindowWidth();
 
-     // Remove event listener when component unmounts
      return () => {
        window.removeEventListener("resize", updateWindowWidth);
      };
    }, []);
 
-  // Check if windowWidth is greater than 400 on the client side
   const isWideEnough = typeof window !== "undefined" && windowWidth > 1280;
 
   return (
@@ -120,6 +115,7 @@ const Formular = ({swal}) => {
             value={form.name}
             onChange={handleChange}
             placeholder="Tvoje meno"
+            autocomplete="off"
           />
           <input
             required
@@ -129,6 +125,7 @@ const Formular = ({swal}) => {
             value={form.email}
             onChange={handleChange}
             placeholder="Tvoj email"
+            autocomplete="off"
           />
           <textarea
             required
@@ -141,11 +138,11 @@ const Formular = ({swal}) => {
             rows="10"
             className="w-[250px] h-52 mb-16 text-white"
             placeholder="Čo by si chcel nám povedať?"
+            autocomplete="off"
           ></textarea>
           <button type="submit"> {loading ? "Sending..." : "Send"}</button>
         </form>
       </motion.div>
-      
     </div>
   );
 };

@@ -12,6 +12,44 @@ const SpravyPage = () => {
         initial="hidden"
         animate={"show"}
       >
+        <h1 className="text-center mb-4 font-bold text-2xl">26.1.2024</h1>
+        <div className="grid grid-cols-1 gap-10">
+          <div className="flex justify-center items-center">
+            <img
+              src="/PRESTUP.png"
+              alt=""
+              className="w-72 border-black border-2"
+            />
+          </div>
+          <div className="flex justify-center text-left items-center mx-auto p-2 w-[350px] sm:w-[575px]">
+            <p>
+              Prestup Kotuša Mallára: „Vzhľadom na to že zajtra sa zúčastním
+              môjho prvého tréningu s klubom MFK Ťahanovce a tým potvrdím môj
+              prestup z FC Bäni do spomínaného klubu, by som sa chcel poďakovať
+              všetkým členom FC Bäni (ďalej už len ako FCB) za príležitosť byť
+              súčasťou tohto úžasného projektu. Počas môjho pôsobenia v FCB sme
+              spoločne dosiahli mnohé úspechy ako napríklad víťaztvo futbalovej
+              ligy na ZŠ Družicovej v sezone 2021/2022, zložili sme sa Peťovi na
+              rukavice, FCB sa takmer zapojilo do miniligy, podnikli sme
+              nespočet výjazdov za cieľom spoznať a povzbudiť iných futbalistov.
+              Stretli sme sa s generačným talentom Landingom Sagnom. Podpísali
+              sme dvoch špičkových hráčov (Lil D a ja nesom autista). FCB bude
+              navždy v mojom srdci a sľubujem že sa jedného dňa vrátim, taktiež
+              budem aj naďalej trenovať s hráčmi tímu FCB a zúčastňovať sa iných
+              klubových aktivít. Aj keď opúšťam FCB ako hráč naďalej budem jeho
+              súčasťou ako člen realizačného týmu a spoluzakladateľ. Ešte raz
+              Vám všetkým ďakujem a už teraz sa teším na môj návrat domov.
+              NAVŽDY VERNÝ ZELENO ČIERNÝ 🖤💚“
+            </p>
+          </div>
+        </div>
+      </motion.div>
+      <motion.div
+        className="mt-24 "
+        variants={slideIn("left", "tween", 0.2, 1)}
+        initial="hidden"
+        animate={"show"}
+      >
         <h1 className="text-center mb-4 font-bold text-2xl">14.12.2023</h1>
         <div className="grid grid-cols-1 gap-10   ">
           <div className="flex justify-center items-center">
@@ -202,6 +240,31 @@ const SpravyPage = () => {
           </div>
         </div>
       </motion.div>
+
+      <h2 className="text-center font-bold text-2xl underline my-4"><a href="/spravy">Späť na začiatok stránky</a></h2>
+
+      <footer>
+        <div className="bgNav text-gray-200 flex flex-col mt-6  justify-center  text-center">
+          <a
+            className="footer w-16 mx-auto text-center text-2xl"
+            href="/cert.jpg"
+            target="_blank"
+          >
+            Čert
+          </a>
+          <p>
+            Túto stránku vytvoril  
+            <a
+              className="cursor-pointer underline "
+              href="https://jaroslav-portfolio.vercel.app/"
+              target="_blank"
+            >
+              Jaroslav Barabáš
+            </a>
+              zo zábavných účelov a nemá v úmysle nikoho zosmiešniť.
+          </p>
+        </div>
+      </footer>
     </div>
   );
 };

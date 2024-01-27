@@ -56,6 +56,11 @@ const SheetMenu = () => {
                 </Link>
               </li>
               <li>
+                <Link href={"/#treningy"} onClick={closeSheet}>
+                  Tréningy
+                </Link>
+              </li>
+              <li>
                 <Link href={"/#komunita"} onClick={closeSheet}>
                   Komunita
                 </Link>

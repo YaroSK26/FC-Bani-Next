@@ -11,7 +11,7 @@ import { useState } from "react";
 const Zostava = () => {
 
 const [ref, inView] = useInView();
- const [hasAnimated, setHasAnimated] = useState(false);
+const [hasAnimated, setHasAnimated] = useState(false);
 
  if (inView && !hasAnimated) {
    setHasAnimated(true);
@@ -19,9 +19,9 @@ const [ref, inView] = useInView();
 
   return (
     <div className="p-2">
-      <p className="md:text-4xl text-3xl text-center pt-5 pb-3 underline ">
+      <h1 className="md:text-4xl text-3xl text-center pt-5 pb-3 underline ">
         Zostava
-      </p>
+      </h1>
 
       <motion.p
         animate={hasAnimated ? "show" : "hidden"}

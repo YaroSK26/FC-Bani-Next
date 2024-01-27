@@ -38,7 +38,7 @@ const Shop = () => {
             Oliverov Bicykel <span className="font-bold"> 2 € </span>
           </p>
           <a target="_blank" href="/vtip1.jpg">
-            <button className="bg-gray-800 text-gray-200 rounded-full px-6 py-2 font-bold mt-1 w-full buttonGradient ">
+            <button className="bg-gray-800 text-gray-200 rounded-full px-6 py-2 font-bold mt-1 w-full buttonGradient  ">
               Kúpiť
             </button>
           </a>

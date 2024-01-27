@@ -16,9 +16,9 @@ const Historia = () => {
    }
   return (
     <div className="bg-gray-900 text-gray-200 p-2">
-      <p className="md:text-4xl text-3xl text-center pt-5 pb-3 underline ">
+      <h1 className="md:text-4xl text-3xl text-center pt-5 pb-3 underline ">
         História
-      </p>
+      </h1>
       <motion.div
         variants={slideIn("left", "tween", 0.2, 1)}
         initial="hidden"
