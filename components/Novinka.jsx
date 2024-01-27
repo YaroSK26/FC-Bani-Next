@@ -37,7 +37,7 @@ const Novinka = () => {
             nesom autista). FCB bude navždy v mojom srdci a sľubujem že sa
             jedného dňa vrátim, taktiež budem aj naďalej trenovať s hráčmi tímu
             FCB a zúčastňovať sa iných klubových aktivít. Aj keď opúšťam FCB ako
-            hráč naďalej budem jeho súčasťou ako člen realizačného týmu a
+            hráč naďalej budem jeho súčasťou ako člen realizačného tímu a
             spoluzakladateľ. Ešte raz Vám všetkým ďakujem a už teraz sa teším na
             môj návrat domov. NAVŽDY VERNÝ ZELENO ČIERNÝ 🖤💚“ <br />
             <Link className="underline text-green-700" href={"/spravy"}>

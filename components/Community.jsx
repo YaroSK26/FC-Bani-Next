@@ -186,7 +186,7 @@
         >
           <h1 className=" text-4xl underline">Komunita</h1>
 
-          <div className="bg-white sm:w-[500px] sm:h-[500px] w-[275px] h-[350px]  my-2 rounded-lg mx-1 border  border-[#0c6a3c] ">
+          <div className="bg-white sm:w-[500px] sm:h-[500px] w-[275px]   my-2 rounded-lg mx-1 border  border-[#0c6a3c] ">
             <div className="flex bg-white text-[#0c6a3c] rounded-lg py-2 justify-center items-center">
               <p className="mr-2">Podporme spoločne FC Bäni!</p>
               <MessagesSquare />
@@ -268,6 +268,7 @@
             <input
               id="shop"
               type="text"
+              autocomplete="off"
               required
               value={text}
               onChange={(e) => setText(e.target.value)}
