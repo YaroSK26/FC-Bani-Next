@@ -1,86 +1,65 @@
-"use client";
+"use client"
 
 import { UserButton, useAuth } from "@clerk/nextjs";
-import { Sheet, SheetContent, SheetTrigger } from "../components/ui/sheet";
-import { Menu } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
 
 const SheetMenu = () => {
-  const [isSheetOpen, setIsSheetOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { isSignedIn } = useAuth();
 
-  const openSheet = () => {
-    setIsSheetOpen(true);
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
   };
 
-  const closeSheet = () => {
-    setIsSheetOpen(false);
+  // This function will be called when a menu item is clicked
+  const handleMenuItemClick = () => {
+    setIsMenuOpen(false); // Close the menu
   };
-
-  const [menuButtonActive, setMenuButtonActive] = useState(false);
 
   return (
-    <div className="w-full">
-      <Sheet open={isSheetOpen}>
-        <SheetTrigger>
-          <Menu
-            onClick={() => {
-              openSheet();
-              setMenuButtonActive(true);
-            }}
-            className={`text-white md:hidden  ${
-              menuButtonActive ? "active" : ""
-            }`}
-          />
-        </SheetTrigger>
-        <SheetContent className="bgNav text-white w-full " side="right">
-          <div className="flex justify-end ">
-            <div
-              onClick={closeSheet}
-              className="w-7 h-7  z-10  bg-gray-200 font-bold  text-gray-900 flex justify-center items-center rounded-3xl"
-            >
-              X
-            </div>
+    <div className="md:hidden">
+      <button onClick={toggleMenu} className="text-white p-4 z-50">
+        {isMenuOpen ? (
+          <div className="z-50">
+            <X className="z-50" />
           </div>
-          <nav className="flex gap-3 justify-end w-full mr-2">
-            <ul className="flex flex-col gap-5 justify-end w-full">
-              <li>
-                <Link href={"/#historia"} onClick={closeSheet}>
-                  História
-                </Link>
+        ) : (
+          <Menu />
+        )}
+      </button>
+      {isMenuOpen && (
+        <div className="fixed inset-0 w-full h-full bg-black bg-opacity-75 z-40">
+          <nav className="bgNav text-white w-full h-full">
+            <ul className="flex flex-col items-start gap-6 pt-5 ml-5 justify-start h-full">
+              <button onClick={toggleMenu} className="text-white p-1 z-50">
+                <div className="z-50 ">
+                  <X />
+                </div>
+              </button>
+              <li onClick={handleMenuItemClick}>
+                <Link href={"/#historia"}>História</Link>
               </li>
-              <li>
-                <Link href={"/#zostava"} onClick={closeSheet}>
-                  Zostava
-                </Link>
+              <li onClick={handleMenuItemClick}>
+                <Link href={"/#zostava"}>Zostava</Link>
               </li>
-              <li>
-                <Link href={"/#treningy"} onClick={closeSheet}>
-                  Tréningy
-                </Link>
+              <li onClick={handleMenuItemClick}>
+                <Link href={"/#treningy"}>Tréningy</Link>
               </li>
-              <li>
-                <Link href={"/#komunita"} onClick={closeSheet}>
-                  Komunita
-                </Link>
+              <li onClick={handleMenuItemClick}>
+                <Link href={"/#komunita"}>Komunita</Link>
               </li>
-              <li>
-                <Link href={"/#shop"} onClick={closeSheet}>
-                  Shop
-                </Link>
+              <li onClick={handleMenuItemClick}>
+                <Link href={"/#shop"}>Shop</Link>
               </li>
-              <span>
-                {isSignedIn && (
-                  <span>
-                    <UserButton />
-                  </span>
-                )}
-              </span>
+              {isSignedIn && (
+                  <UserButton />       
+              )}
             </ul>
           </nav>
-        </SheetContent>
-      </Sheet>
+        </div>
+      )}
     </div>
   );
 };
