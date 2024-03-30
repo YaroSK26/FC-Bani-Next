@@ -12,6 +12,35 @@ const SpravyPage = () => {
         initial="hidden"
         animate={"show"}
       >
+        <h1 className="text-center mb-4 font-bold text-2xl">29.3.2024</h1>
+        <div className="grid grid-cols-1 gap-10">
+          <div className="flex justify-center items-center">
+            <img
+              src="/rudnany.png"
+              alt=""
+              className="w-72 h-72 border-black border-2"
+            />
+          </div>
+          <div className="flex justify-center text-left items-center mx-auto p-2 w-[350px] sm:w-[575px]">
+            <p>
+              Prestup Janka Šunky: „Dnes som absolvoval prvý OŠK Rudňany tréning
+              a chcem povedať, že ako kapitán FC Bäni odchádzam z tohto tímu a
+              prestupujem do tímu OŠK Rudňany. Hodnota prestupu je 2€. Chcem
+              poďakovať všetkým členom FC Bäni a želám len to najlepšie a vždy
+              bude v mojom srdci FC Bäni.Novým kapitánom FC Bäni sa stáva Peter
+              Herman, gratulujem. Neodchádzam navždy, niekedy sa určite vrátim.
+              Navždy verny, zeleno čierny. Jedine Vaaaaajoooooooooooooo,
+              vajoooooooooo 🖤💚“
+            </p>
+          </div>
+        </div>
+      </motion.div>
+      <motion.div
+        className="mt-24 "
+        variants={slideIn("left", "tween", 0.2, 1)}
+        initial="hidden"
+        animate={"show"}
+      >
         <h1 className="text-center mb-4 font-bold text-2xl">26.1.2024</h1>
         <div className="grid grid-cols-1 gap-10">
           <div className="flex justify-center items-center">
@@ -241,7 +270,9 @@ const SpravyPage = () => {
         </div>
       </motion.div>
 
-      <h2 className="text-center font-bold text-2xl underline my-4"><a href="/spravy">Späť na začiatok stránky</a></h2>
+      <h2 className="text-center font-bold text-2xl underline my-4">
+        <a href="/spravy">Späť na začiatok stránky</a>
+      </h2>
 
       <footer>
         <div className="bgNav text-gray-200 flex flex-col mt-6  justify-center  text-center">
