@@ -70,7 +70,7 @@ export default function Home() {
             >
               Jaroslav Barabáš
             </a>
-              zo zábavných účelov a nemá v úmysle nikoho zosmiešniť.z
+              zo zábavných účelov a nemá v úmysle nikoho zosmiešniť
           </p>
         </div>
       </footer>
