@@ -12,6 +12,37 @@ const SpravyPage = () => {
         initial="hidden"
         animate={"show"}
       >
+        <h1 className="text-center mb-4 font-bold text-2xl">18.6.2024</h1>
+        <div className="grid grid-cols-1 gap-10">
+          <div className="flex justify-center items-center">
+            <img
+              src="/pohyb.png"
+              alt=""
+              className="w-72 h-52 border-black border-2"
+            />
+          </div>
+          <div className="flex justify-center text-left items-center mx-auto p-2 w-[350px] sm:w-[575px]">
+            <p>
+              Dnes, 18.6., FC Bäni vyhralo ďalší zápas s bilanciou 15:9,
+              tentokrát proti silnému súperovi: Podpor Pohyb Košice. Ide o
+              najlepší (zároveň aj jediný) futsalový klub v Košiciach. Hráči FC
+              Bäni dokázali zdolať súpera hlavne vďaka technickej prevahe a
+              dokonalému čítaniu hry. V zápase nastúpili aj hráči Matúš Kollár a
+              Janko Šunka, obaja sa vrátili do FC Bäni na hosťovanie a zotrvajú
+              v tomto klube až do začiatku sezóny. Góly: Jakub Šimko: celkom
+              dosť Janko Šunka: veľa Matúš Kollár: ešte viac Taktiež musíme
+              pochváliť heroický výkon brankára Petra Hermana, ktorý podržal
+              mužstvo v najťažších chvíľach.
+            </p>
+          </div>
+        </div>
+      </motion.div>
+      <motion.div
+        className="mt-24 "
+        variants={slideIn("left", "tween", 0.2, 1)}
+        initial="hidden"
+        animate={"show"}
+      >
         <h1 className="text-center mb-4 font-bold text-2xl">29.3.2024</h1>
         <div className="grid grid-cols-1 gap-10">
           <div className="flex justify-center items-center">
