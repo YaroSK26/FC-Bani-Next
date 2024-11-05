@@ -23,7 +23,7 @@ const SpravyPage = () => {
           </div>
           <div className="flex justify-center text-left items-center mx-auto p-2 w-[350px] sm:w-[575px]">
             <p>
-              Dnes, 18.6., FC Bäni vyhralo ďalší zápas s bilanciou 15:9,
+              18.6.2024, FC Bäni vyhralo ďalší zápas s bilanciou 15:9,
               tentokrát proti silnému súperovi: Podpor Pohyb Košice. Ide o
               najlepší (zároveň aj jediný) futsalový klub v Košiciach. Hráči FC
               Bäni dokázali zdolať súpera hlavne vďaka technickej prevahe a
