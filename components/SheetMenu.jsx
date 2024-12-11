@@ -53,9 +53,7 @@ const SheetMenu = () => {
               <li onClick={handleMenuItemClick}>
                 <Link href={"/#shop"}>Shop</Link>
               </li>
-              {isSignedIn && (
-                  <UserButton />       
-              )}
+              {isSignedIn && <UserButton afterSignOutUrl="/" />}
             </ul>
           </nav>
         </div>

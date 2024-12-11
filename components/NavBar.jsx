@@ -77,7 +77,7 @@ const NavBar = () => {
               <span>
                 {isSignedIn && (
                   <span>
-                    <UserButton />
+                    <UserButton afterSignOutUrl="/" />
                   </span>
                 )}
               </span>
