@@ -1,16 +1,8 @@
 User-agent: Googlebot
 Allow: /
-Allow: /galeria
-Allow: /kontakt
-Allow: /produkt/*
-Disallow: /admin
-Disallow: /kosik
+
 
 
 User-agent: *
 Allow: /
-Allow: /galeria
-Allow: /kontakt
-Allow: /produkt/*
-Disallow: /admin
-Disallow: /kosik
+
